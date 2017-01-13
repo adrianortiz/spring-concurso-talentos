@@ -2,8 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
 	<!-- Spring agrega por defecto a la fabrica de Beans para ser inyectados -->
 	<context:component-scan base-package="concursantes" />
@@ -47,5 +49,18 @@
 	</bean>
 	
 	
+	
+	
+	
+	<!-- configuración de AOP -->
+	<aop:config>
+		<aop:aspect ref="audiencia">
+			<aop:pointcut expression="execution(* concursantes.Concursante.ejecutar(..))" id="show"/>
+			<aop:before pointcut-ref="show" method="sentarse"/>
+			<aop:before pointcut-ref="show" method="apagarCelulares"/>
+			<aop:after-returning pointcut-ref="show" method="aplaudir"/>
+			<aop:after-throwing pointcut-ref="show" method="devolucion"/>
+		</aop:aspect>
+	</aop:config>
 	
 </beans>
