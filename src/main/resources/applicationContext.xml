@@ -53,6 +53,7 @@
 	
 	
 	<!-- configuración de AOP -->
+	<!--
 	<aop:config>
 		<aop:aspect ref="audiencia">
 			<aop:pointcut expression="execution(* concursantes.Concursante.ejecutar(..))" id="show"/>
@@ -60,6 +61,14 @@
 			<aop:before pointcut-ref="show" method="apagarCelulares"/>
 			<aop:after-returning pointcut-ref="show" method="aplaudir"/>
 			<aop:after-throwing pointcut-ref="show" method="devolucion"/>
+		</aop:aspect>
+	</aop:config>
+	-->
+	
+	<aop:config>
+		<aop:aspect ref="audiencia">
+			<aop:pointcut expression="execution(* concursantes.Concursante.ejecutar(..))" id="show"/>
+			<aop:around pointcut-ref="show" method="monitorearShow"/>
 		</aop:aspect>
 	</aop:config>
 	
