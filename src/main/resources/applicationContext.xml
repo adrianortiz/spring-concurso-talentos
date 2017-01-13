@@ -9,6 +9,10 @@
 
 	<!-- Spring agrega por defecto a la fabrica de Beans para ser inyectados -->
 	<context:component-scan base-package="concursantes" />
+	
+	<!-- Decirle a Spring que vamos a manejar AOP por medio de anotaciones -->
+	<aop:aspectj-autoproxy/>
+	
 
 	<!-- Codigo equivalente en Java: -->
 	<!-- Malabarista concursante1 = new Malabarista(); -->
@@ -47,29 +51,5 @@
 			<bean class="concursantes.Saxofon"></bean>
 		</property>
 	</bean>
-	
-	
-	
-	
-	
-	<!-- configuración de AOP -->
-	<!--
-	<aop:config>
-		<aop:aspect ref="audiencia">
-			<aop:pointcut expression="execution(* concursantes.Concursante.ejecutar(..))" id="show"/>
-			<aop:before pointcut-ref="show" method="sentarse"/>
-			<aop:before pointcut-ref="show" method="apagarCelulares"/>
-			<aop:after-returning pointcut-ref="show" method="aplaudir"/>
-			<aop:after-throwing pointcut-ref="show" method="devolucion"/>
-		</aop:aspect>
-	</aop:config>
-	-->
-	
-	<aop:config>
-		<aop:aspect ref="audiencia">
-			<aop:pointcut expression="execution(* concursantes.Concursante.ejecutar(..))" id="show"/>
-			<aop:around pointcut-ref="show" method="monitorearShow"/>
-		</aop:aspect>
-	</aop:config>
 	
 </beans>
