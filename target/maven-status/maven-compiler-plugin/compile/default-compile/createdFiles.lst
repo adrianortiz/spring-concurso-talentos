@@ -1,11 +1,15 @@
 concursantes/Piano.class
 concursantes/EjecucionExeption.class
 prueba/PruebaConcursoTalento.class
+concursantes/Audiencia.class
 concursantes/Poema.class
+concursantes/Adivinador.class
+concursantes/Mago.class
 concursantes/Instrumento.class
 concursantes/Musico.class
-concursantes/Audencia.class
 concursantes/Soneto.class
+concursantes/Voluntario.class
+concursantes/Pensador.class
 concursantes/Malabarista.class
 concursantes/Saxofon.class
 concursantes/Concursante.class

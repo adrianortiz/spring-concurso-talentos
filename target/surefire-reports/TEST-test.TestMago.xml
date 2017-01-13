@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="test.TestConcursoTalentos" time="0.604" errors="1" skipped="0">
+<testsuite tests="1" failures="0" name="test.TestMago" time="0.041" errors="1" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/jre/lib"/>
@@ -62,7 +62,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="test.TestConcursoTalentos" name="testMalabarista" time="0.604">
+  <testcase classname="test.TestMago" name="testMagoAdivinador" time="0.041">
     <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
 	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
@@ -130,12 +130,12 @@ Caused by: java.lang.IllegalArgumentException: warning no match for this type na
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
 	... 43 more
 </error>
-    <system-out>0    [main] %-5 org.springframework.test.context.TestContextManager  - @TestExecutionListeners is not present for class [class test.TestConcursoTalentos]: using defaults.
-118  [main] %-5 org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
-317  [main] %-5 org.springframework.context.support.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@3fb6a447: startup date [Thu Jan 12 21:37:44 CST 2017]; root of context hierarchy
-444  [main] %-5 org.springframework.beans.factory.support.DefaultListableBeanFactory  - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@319b92f3: defining beans [audiencia,mago,solei,soleiRecitador,jasonPiano,piano,saxofon,poema,voluntario,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,jasonSax,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
-613  [main] %-5 org.springframework.beans.factory.support.DefaultListableBeanFactory  - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@319b92f3: defining beans [audiencia,mago,solei,soleiRecitador,jasonPiano,piano,saxofon,poema,voluntario,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,jasonSax,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
-614  [main] %-5 org.springframework.test.context.TestContextManager  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6a6cb05c] to prepare test instance [test.TestConcursoTalentos@40a4337a]
+    <system-out>622  [main] %-5 org.springframework.test.context.TestContextManager  - @TestExecutionListeners is not present for class [class test.TestMago]: using defaults.
+625  [main] %-5 org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [applicationContext.xml]
+706  [main] %-5 org.springframework.context.support.GenericApplicationContext  - Refreshing org.springframework.context.support.GenericApplicationContext@6989da5e: startup date [Thu Jan 12 21:37:44 CST 2017]; root of context hierarchy
+722  [main] %-5 org.springframework.beans.factory.support.DefaultListableBeanFactory  - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4d1c00d0: defining beans [audiencia,mago,solei,soleiRecitador,jasonPiano,piano,saxofon,poema,voluntario,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,jasonSax,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+732  [main] %-5 org.springframework.beans.factory.support.DefaultListableBeanFactory  - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4d1c00d0: defining beans [audiencia,mago,solei,soleiRecitador,jasonPiano,piano,saxofon,poema,voluntario,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.aop.config.internalAutoProxyCreator,jasonSax,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+733  [main] %-5 org.springframework.test.context.TestContextManager  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@24269709] to prepare test instance [test.TestMago@2aceadd4]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
 	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
@@ -203,7 +203,5 @@ Caused by: java.lang.IllegalArgumentException: warning no match for this type na
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
 	... 43 more
 </system-out>
-    <system-err>log4j:ERROR Unexpected char [ ] at position 14 in conversion patterrn.
-</system-err>
   </testcase>
 </testsuite>

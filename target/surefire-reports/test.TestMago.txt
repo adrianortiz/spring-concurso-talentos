@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
-Test set: test.TestConcursoTalentos
+Test set: test.TestMago
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.793 sec <<< FAILURE!
-testMalabarista(test.TestConcursoTalentos)  Time elapsed: 0.604 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.043 sec <<< FAILURE!
+testMagoAdivinador(test.TestMago)  Time elapsed: 0.041 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.TestContext.getApplicationContext(TestContext.java:157)
 	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
